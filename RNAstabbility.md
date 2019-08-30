@@ -55,10 +55,10 @@ the AUC is 0.56 for balanced dataset
 
 III, Analysis: any enrichment of fm-eqtl within RBP binding regions:
 1, enrichment of fm-eqtl on RBP binding and cis-elements, but not in miRNA binding sites:
-eCLIP RBPb: res.highpip_rbp_broadtiss.eclip.pdf
-Postar2 RBPb: res.highpip_rbp_broadtiss.postar.pdf
-miRNA binding: res.highpip_rbp_broadtiss.consmirna_b.pdf
-Cis-element: res.highpip_rbp_broadtiss.ciselement.pdf
+eCLIP RBPb: https://github.com/lalzs1982/Noncoding/blob/master/images/res.highpip_rbp_broadtiss.eclip.pdf
+Postar2 RBPb: https://github.com/lalzs1982/Noncoding/blob/master/images/res.highpip_rbp_broadtiss.postar.pdf
+miRNA binding: https://github.com/lalzs1982/Noncoding/blob/master/images/res.highpip_rbp_broadtiss.consmirna_b.pdf
+Cis-element: https://github.com/lalzs1982/Noncoding/blob/master/images/res.highpip_rbp_broadtiss.ciselement.pdf
 
 2, overal enrichment signal is significant compared to control:
 random sampling of similar number of higher pip SNPs from among control, and use random as control, repeat the analysis using eCLIP data, 1000 times, calculate number of RBPs with eQTL enrichment (FC>=2, raw p < 0.001)
@@ -83,22 +83,39 @@ V, Analysis, machinelearning for high PIP brain prediction using RBP (POSTAR2) b
 
 1, use all RBP:
 for balanced dataset:
-./res.Brainhighpip_rbp_bal.pred.AUC
-./res.Brainhighpip_rbp_bal.xgb_train_featureImportance 
+https://github.com/lalzs1982/Noncoding/blob/master/images/res.Brainhighpip_rbp_bal.pred.AUC.pdf
+
+https://github.com/lalzs1982/Noncoding/blob/master/images/res.Brainhighpip_rbp_bal.xgb_train_featureImportance.pdf
 
 general consistence between feature importance and DNM overenrichment
 
 the AUC is 0.53 when using unbalanced dataset
 
-2, selected RBP with enriched DNMs:
+2, selected 28 top RBPs with significantly high enriched highPIP eQTLs:
 for balanced dataset
-./res.forxgboost.rbp.sel.bal.xgb_train_AUC.aucpr
+https://github.com/lalzs1982/Noncoding/blob/master/images/res.forxgboost.rbp.sel.bal.xgb_train_AUC.aucpr.pdf
 
-the AUC is 0.53 when using unbalanced dataset
+high PIP eQTLs binded by at least one of the selected RBPs:
+
+eQTLs	HighPIP/Not	withinRBPbinding/Not
+  38385 0	0
+  10057 0	1
+    379 1	0
+    218 1	1
+ 
+
+the AUC is 0.53 when using original dataset (unbalanced)
+
 
 VI, for conservation scores (CADD, phylop etc.):
 the AUC is 0.54 for balanced data
 
 
 VII. combination of different features for high PIP brain prediction
+1, commbination of conservation score and deepsea ref predictions
+
+https://github.com/lalzs1982/Noncoding/blob/master/images/res.Brainhighpip_anno_deepsea_Ref_bal.pred.AUC.pdf
+ and the AUC is 0.66 for original data
+ 
+ 
 
