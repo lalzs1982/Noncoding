@@ -56,9 +56,6 @@ miRNA binding sites from targescan database (default conserved ) : 165045 sites 
 
 3'UTR ciselements from UTRdb database: 54189 sites for 27 elements, length mostly 20-50 bp, few hundreds
 
-3, RBP binding prediction using deepsea model (feature score):
-
-4, Conservation and selection scores:
 
 II, higher conservation/selection score in fm-eqtl compared with control:
 
