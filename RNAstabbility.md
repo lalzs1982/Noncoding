@@ -1,8 +1,11 @@
 Main summary
 
 I, data
+
 1, finemapped eQTL (fm-eqtl) and control SNPs
+
 1.1,
+
 in total 328,661 fm-eqtls with PIP score for different tissues obtained.
 
 fm-eqtl mapped within coding gene 3'UTR will be analyzed here, in total:
