@@ -57,7 +57,12 @@ miRNA binding sites from targescan database (default conserved ) : 165045 sites 
 3'UTR ciselements from UTRdb database: 54189 sites for 27 elements, length mostly 20-50 bp, few hundreds
 
 
-II, higher conservation/selection score in fm-eqtl compared with control:
+II, slightly higher conservation/selection score in fm-eqtl compared with control:
+
+Distribution of conservatio socres and deepsea-logit value for each RBP: 
+
+https://github.com/lalzs1982/Noncoding/blob/master/images/res_Brainhip_scores_distr.pdf
+
 
 the AUC is 0.56 for balanced dataset
 
