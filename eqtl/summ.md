@@ -88,9 +88,10 @@ https://github.com/lalzs1982/Noncoding/blob/master/eqtl/res.eQTL_highpip.pi1.utr
 (4), consistence of predicted RBP binding changes  (by deepsea) for ref/alternate alleles of HP eQTL and observed eQTL-gene expression associations
 method:
 
-For each RBP, the relationship between the predicted RBP binding probability changes across all HP eQTLs vs their effect size on target gene expression were compared, 
+For each RBP, the relationship between the deepsea predicted RBP binding probability changes between reference and alternative allele (x-axis) across all HP eQTLs vs their effect size on target gene expression (y-axis) were plot and compared, 
 with focus on the direction changes (like negative/positive relationship for RBP binding probability changes  from ref to alternate allele and that for gene expression level changes of target gene)
 (Note, here we hypothesize that for the same RBP, its binding to different eQTLs will affect target gene expression level in the same directions across different sites)
+
 results: out of 73 RBPs tested, we have only 5 RBPs (HNRNPK, PABP, SF3A3, SLTM, U2AF1) with clear pattern by manual check, and at the same time 4 of them show significant eQTL over enrichment according to above analysis
 
 https://github.com/lalzs1982/Noncoding/blob/master/eqtl/res.deepsea_diff_vs_geneexpr_association.pdf
