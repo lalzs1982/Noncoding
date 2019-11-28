@@ -96,3 +96,38 @@ results: out of 73 RBPs tested, we have only 5 RBPs (HNRNPK, PABP, SF3A3, SLTM, 
 
 https://github.com/lalzs1982/Noncoding/blob/master/eqtl/res.deepsea_diff_vs_geneexpr_association.pdf
 
+
+(5) The effect of eQTL on RNA secondary structure changes
+
+Data:
+
+a, # HP eQTLs (pip score>0.5), with # common SNPs as control, all within 3'UTR
+
+b, RBP binding sites for # RBPs in HepG2 and K562 cell lines from eCLIP dataset (combined for analysis here)
+
+c, motif (in PWM format) for # RBPs out of # analyzed here was recorded in the Cis-BP database, and these RBPs will be taken as primary sequence regonization RBPs for binding, which may indicate open RNA structure (or simply no secondary structure formed) is important for these RBP binding than others   
+
+Methods:
+
+a, for each SNP, 200 bp flanking region on transcripts was extracted and RNAfold program was run (using default parameters) to predict the  ensembl of RNA secondary structures, with base pair status, base pair probability in the ensembl and free energy of structure obtained.
+
+b, similarly, for each SNP, 200 bp flanking region on transcripts was extracted and RNAsnp program (mode2) was run to predict the mutation effect on RNA secondary structutre, with structure distance between sequences containing reference and alternate allele, and estimated p value reported
+
+Results:
+a, 46.7% reference allele of HP eQTLs tend to form strong base pair with other bases according to RNAfold predictions, and the proportion is 43.2% for control. binomial test p 0.002647.
+
+b, among HP eQTLs within RBP binding region, base pair status (reference allele) for RBPs  with or without known sequence motif was compared, and found that 45% can form strong base pairs for HP eQTL within binding region for RBPs with known motif, 49% for RBPs without known motif, binomial test p: #
+
+c, comparions of RNA secondary structure ensembl free enery (lower score indicates more stable RNA secondary structure) for HP eQTL and Control found significantly lower for the former.
+
+https://github.com/lalzs1982/Noncoding/blob/master/eqtl/res.freeenergy_HPvsControl_refallele.pdf
+
+d, comparions of RNA secondary structure ensembl free enery (lower score indicates more stable RNA secondary structure) for HP eQTL within RBP binding  region or not found significantly lower for the former.
+
+https://github.com/lalzs1982/Noncoding/blob/master/eqtl/res.freeenergy_RBPB_vs_NonRBPB_HPrefallele.pdf
+ 
+e, comparions of RNAsnp predicted distance for ref and alternate allele for HP eQTL and Control found significantly higher for the former.
+
+https://github.com/lalzs1982/Noncoding/blob/master/eqtl/res.d_max_RNAsnp_HPvsControl.pdf
+
+
